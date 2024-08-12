@@ -1,0 +1,53 @@
+package array;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author MALLI
+ */
+public class Array {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        // Solicitar el tamaño del array
+        System.out.print("Ingrese el tamaño del array: ");
+        int tamaño = scanner.nextInt();
+
+        // Crear el array
+        int[] numeros = new int[tamaño];
+
+        // Leer los números y almacenarlos en el array
+        System.out.println("Ingrese " + tamaño + " numeros enteros:");
+        for (int i = 0; i < tamaño; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Inicializar contadores
+        int positivos = 0;
+        int negativos = 0;
+        int ceros = 0;
+
+        // Recorrer el array y contar positivos, negativos y ceros
+        for (int i = 0; i < tamaño; i++) {
+            if (numeros[i] > 0) {
+                positivos++;
+            } else if (numeros[i] < 0) {
+                negativos++;
+            } else {
+                ceros++;
+            }
+        }
+
+        // Mostrar los resultados
+        System.out.println("Cantidad de numeros positivos: " + positivos);
+        System.out.println("Cantidad de numeros negativos: " + negativos);
+        System.out.println("Cantidad de ceros: " + ceros);
+        // TODO code application logic here
+    }
+    
+}
